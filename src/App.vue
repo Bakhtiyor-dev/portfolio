@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+    <div class="art-mobile-top-bar"></div>
+    <div class="art-app-wrapper">
+      <div class="art-app-container">
+       
+       <Infobar></Infobar> 
+       <Menubar></Menubar>
+       <Content></Content>
+     
+      </div>
+
+    </div>
+    <Preloader></Preloader>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Infobar from './components/Infobar.vue';
+import Content from './components/Content.vue';
+import Menubar from './components/Menubar.vue';
+import Preloader from './components/Preloader.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Infobar,
+    Content,
+    Menubar,
+    Preloader
   }
-}
+ 
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
